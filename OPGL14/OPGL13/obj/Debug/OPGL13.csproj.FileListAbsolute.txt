@@ -1,0 +1,12 @@
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL13\OPGL13\bin\Debug\OPGL13.exe.config
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL13\OPGL13\bin\Debug\OPGL13.exe
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL13\OPGL13\bin\Debug\OPGL13.pdb
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL13\OPGL13\obj\Debug\OPGL13.csprojResolveAssemblyReference.cache
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL13\OPGL13\obj\Debug\OPGL13.Properties.Resources.resources
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL13\OPGL13\obj\Debug\OPGL13.csproj.GenerateResource.Cache
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL13\OPGL13\obj\Debug\OPGL13.exe
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL13\OPGL13\obj\Debug\OPGL13.pdb
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL13\OPGL13\obj\Debug\OPGL13.Form1.resources
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL14\OPGL13\bin\Debug\OPGL13.exe.config
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL14\OPGL13\obj\Debug\OPGL13.exe
+C:\Users\olehk\Documents\Visual Studio 2012\Projects\OPGL14\OPGL13\obj\Debug\OPGL13.pdb
