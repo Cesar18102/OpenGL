@@ -1,0 +1,27 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>OpenGL.cs</DefaultName>
+    <Name>OpenGL</Name>
+    <Description>OpenGL Base Class (import OpenGL)</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Windows.Forms</Assembly>
+      </Reference>
+    </References>
+      <ProjectItem SubType="UserControl" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">OpenGL.cs</ProjectItem>
+      <ProjectItem SubType="" TargetFileName="$fileinputname$.Designer.cs" ReplaceParameters="true">OpenGL.Designer.cs</ProjectItem>
+      <ProjectItem SubType="" TargetFileName="$fileinputname$.Font.cs" ReplaceParameters="true">OpenGL.Font.cs</ProjectItem>
+      <ProjectItem SubType="" TargetFileName="$fileinputname$.GL.cs" ReplaceParameters="true">OpenGL.GL.cs</ProjectItem>
+      <ProjectItem SubType="" TargetFileName="$fileinputname$.GLU.cs" ReplaceParameters="true">OpenGL.GLU.cs</ProjectItem>
+      <ProjectItem SubType="" TargetFileName="$fileinputname$.WGL.cs" ReplaceParameters="true">OpenGL.WGL.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="OpenGL.ico">OpenGL.ico</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

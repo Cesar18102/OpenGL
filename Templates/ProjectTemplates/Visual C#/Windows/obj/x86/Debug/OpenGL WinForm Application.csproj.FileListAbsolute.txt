@@ -1,0 +1,3 @@
+C:\Users\olehk\Desktop\OpenGL\Templates\ProjectTemplates\Visual C#\Windows\obj\x86\Debug\OpenGL WinForm Application.csprojResolveAssemblyReference.cache
+C:\Users\olehk\Desktop\OpenGL\Templates\ProjectTemplates\Visual C#\Windows\obj\x86\Debug\$safeprojectname$.Properties.Resources.resources
+C:\Users\olehk\Desktop\OpenGL\Templates\ProjectTemplates\Visual C#\Windows\obj\x86\Debug\OpenGL WinForm Application.csproj.GenerateResource.Cache
