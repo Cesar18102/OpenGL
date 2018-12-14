@@ -12,32 +12,25 @@ namespace OPGL13
         private IntPtr HWND;
         private IntPtr WGL_CTX;
 
-        public const int CONTROL_ID_1 = 1;
-        public const int CONTROL_ID_2 = 2;
-        public const int CONTROL_ID_3 = 3;
-
         private static float a = 0.46f;
         private static float b = 0.82f;
         private static float c = 0.6f;
 
-        private static float fi = -60;
-        private static float om = 60;
-        private static float ksi = 40;
+        private static float gm = -60; //gama
+        private static float om = 60; //omega
+        private static float ksi = 40; //ksi
 
-        private static float s = (float)(Math.Sqrt(Math.Abs(a * a - 2 * a * c * Math.Cos((180 + fi - om) * Math.PI / 180))));
-        private static float maxs = s;
+        private static float s = (float)(Math.Sqrt(Math.Abs(a * a - 2 * a * c * Math.Cos((180 + gm - om) * Math.PI / 180))));
+        private static float maxs = s; //upper border for s
 
-        private static float H = 400f;
-        private static float W = 400f;
+        private static float H = 400f; //model standard height
+        private static float W = 400f; //model standard width
 
-        private static float HH = 300f;
-        private static float HW = 350f;
+        private static float DH = 300f; //model top margin
+        private static float DW = 350f; //model left margin
 
-        private static float DH = HH;
-        private static float DW = HW;
-
-        private static float OX = 0f;
-        private static float OY = 0f;
+        private static float OX = 0f; //system center x
+        private static float OY = 0f; //system center y
 
         private static float AX = W * b;
         private static float AY = 0f;
@@ -48,9 +41,9 @@ namespace OPGL13
         private static float CX = W * a;
         private static float CY = 0f;
 
-        private static float al = 30;
-        private static float bt = 10;
-        private static float sc = 1;
+        private static float al = 30; //rotation around oX angle
+        private static float bt = 10; //rotation around oY angle
+        private static float sc = 1; //scale
 
         public RenderControl()
         {
@@ -67,7 +60,7 @@ namespace OPGL13
             glClearColor(BackColor);
             glColor(ForeColor);
 
-            glClearDepth(1000f * sc);   
+            glClearDepth(2000f * sc);   
             glEnable(GL_DEPTH_TEST);
             glDepthFunc(GL_LEQUAL);
             glShadeModel(GL_SMOOTH);
@@ -83,7 +76,7 @@ namespace OPGL13
             glLoadIdentity();
 
             glViewport(0, 0, Width, Height);
-            glOrtho(0, Width + 1, Height + 1, 0, -500f * sc, 500f * sc);
+            glOrtho(0, Width + 1, Height + 1, 0, -1000f * sc, 1000f * sc);
 
             glColor3d(1, 0, 0);
             glLineWidth(1);
@@ -113,7 +106,7 @@ namespace OPGL13
             glPushMatrix();
 
                 glColorMaterial(GL_FRONT_AND_BACK, GL_EMISSION);
-                glTranslatef(DW * sc, DH * sc, 0f);
+                glTranslatef(DW, DH, 0f);
 
                 glRotatef(al, -1, 0, 0);//PERSPECTIVE
                 glRotatef(bt, 0, -1, 0);//PERSPECTIVE
@@ -129,7 +122,7 @@ namespace OPGL13
 
             glPushMatrix();
 
-                glTranslatef(DW * sc, DH * sc, 0f);
+                glTranslatef(DW, DH, 0f);
 
                 glRotatef(al, -1, 0, 0);//PERSPECTIVE
                 glRotatef(bt, 0, -1, 0);//PERSPECTIVE
@@ -148,7 +141,7 @@ namespace OPGL13
 
             glPushMatrix();
 
-                glTranslatef(DW * sc, DH * sc, 0f);
+                glTranslatef(DW, DH, 0f);
 
                 glRotatef(al, -1, 0, 0);//PERSPECTIVE
                 glRotatef(bt, 0, -1, 0);//PERSPECTIVE
@@ -169,7 +162,7 @@ namespace OPGL13
 
             glPushMatrix();
 
-                glTranslatef(DW * sc, DH * sc, 0f);
+                glTranslatef(DW, DH, 0f);
 
                 glRotatef(al, -1, 0, 0);//PERSPECTIVE
                 glRotatef(bt, 0, -1, 0);//PERSPECTIVE
@@ -186,7 +179,7 @@ namespace OPGL13
 
             glPushMatrix();
 
-                glTranslatef(DW * sc, DH * sc, 0f);
+                glTranslatef(DW, DH, 0f);
 
                 glRotatef(al, -1, 0, 0);//PERSPECTIVE
                 glRotatef(bt, 0, -1, 0);//PERSPECTIVE
@@ -200,7 +193,7 @@ namespace OPGL13
 
             glPushMatrix();
 
-                glTranslatef(DW * sc, DH * sc, 0f);
+                glTranslatef(DW, DH, 0f);
 
                 glRotatef(al, -1, 0, 0);//PERSPECTIVE
                 glRotatef(bt, 0, -1, 0);//PERSPECTIVE
@@ -220,7 +213,7 @@ namespace OPGL13
 
             glPushMatrix();
 
-                glTranslatef(DW * sc, DH * sc, 0f);
+                glTranslatef(DW, DH, 0f);
 
                 glRotatef(al, -1, 0, 0);//PERSPECTIVE
                 glRotatef(bt, 0, -1, 0);//PERSPECTIVE

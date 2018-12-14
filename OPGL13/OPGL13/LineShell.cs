@@ -22,7 +22,9 @@ namespace OPGL13
         private List<Color> Colors = new List<Color>() { new Color(), new Color(), new Color(), 
                                                          new Color(), new Color(), new Color() };
 
-        public LineShell(float x1, float y1, float x2, float y2, float dy, float dz, List<Color> CS)
+        private float A;
+
+        public LineShell(float x1, float y1, float x2, float y2, float dy, float dz, List<Color> CS, float alpha)
         {
             X1 = x1;
             Y1 = y1;
@@ -35,6 +37,8 @@ namespace OPGL13
 
             for (int i = 0; i < CS.Count && i < Colors.Count; i++)
                 Colors[i] = CS[i];
+
+            A = alpha;
         }
 
         public void Draw()
@@ -42,37 +46,37 @@ namespace OPGL13
 
             RenderControl.glBegin(RenderControl.GL_QUADS);
 
-                RenderControl.glColor3d(Colors[0].R, Colors[0].G, Colors[0].B);
+                RenderControl.glColor4f(Colors[0].R, Colors[0].G, Colors[0].B, A);
                 RenderControl.glVertex3f(X1, Y1 - DY, -DZ);
                 RenderControl.glVertex3f(X2, Y2 - DY, -DZ);
                 RenderControl.glVertex3f(X2, Y2 - DY, DZ);
                 RenderControl.glVertex3f(X1, Y1 - DY, DZ);
 
-                RenderControl.glColor3d(Colors[1].R, Colors[1].G, Colors[1].B);
+                RenderControl.glColor4f(Colors[1].R, Colors[1].G, Colors[1].B, A);
                 RenderControl.glVertex3f(X1, Y1 + DY, -DZ);
                 RenderControl.glVertex3f(X2, Y2 + DY, -DZ);
                 RenderControl.glVertex3f(X2, Y2 + DY, DZ);
                 RenderControl.glVertex3f(X1, Y1 + DY, DZ);
 
-                RenderControl.glColor3d(Colors[2].R, Colors[2].G, Colors[2].B);
+                RenderControl.glColor4f(Colors[2].R, Colors[2].G, Colors[2].B, A);
                 RenderControl.glVertex3f(X1, Y1 - DY, -DZ);
                 RenderControl.glVertex3f(X2, Y2 - DY, -DZ);
                 RenderControl.glVertex3f(X2, Y2 + DY, -DZ);
                 RenderControl.glVertex3f(X1, Y1 + DY, -DZ);
 
-                RenderControl.glColor3d(Colors[3].R, Colors[3].G, Colors[3].B);
+                RenderControl.glColor4f(Colors[3].R, Colors[3].G, Colors[3].B, A);
                 RenderControl.glVertex3f(X1, Y1 - DY, DZ);
                 RenderControl.glVertex3f(X2, Y2 - DY, DZ);
                 RenderControl.glVertex3f(X2, Y2 + DY, DZ);
                 RenderControl.glVertex3f(X1, Y1 + DY, DZ);
 
-                RenderControl.glColor3d(Colors[4].R, Colors[4].G, Colors[4].B);
+                RenderControl.glColor4f(Colors[4].R, Colors[4].G, Colors[4].B, A);
                 RenderControl.glVertex3f(X1, Y1 - DY, -DZ);
                 RenderControl.glVertex3f(X1, Y1 + DY, -DZ);
                 RenderControl.glVertex3f(X1, Y1 + DY, DZ);
                 RenderControl.glVertex3f(X1, Y1 - DY, DZ);
 
-                RenderControl.glColor3d(Colors[5].R, Colors[5].G, Colors[5].B);
+                RenderControl.glColor4f(Colors[5].R, Colors[5].G, Colors[5].B, A);
                 RenderControl.glVertex3f(X2, Y2 - DY, -DZ);
                 RenderControl.glVertex3f(X2, Y2 + DY, -DZ);
                 RenderControl.glVertex3f(X2, Y2 + DY, DZ);
